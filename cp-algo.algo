@@ -1,0 +1,22 @@
+ALGORITHM checkpoint-algo
+VAR
+    C: CHAR := ' ';
+    nbchar: INTEGER :=0;
+    nbv: INTEGER :=0;
+    nbmots: INTEGER :=0;
+
+BEGIN
+    WHILE (C<>'.') DO
+        read (C);
+        nbchar:=nbchar+1;
+        IF (C='a' or C='e' or C='i' or C='o' or C='o' or C='u' or C='y') THEN
+            nbv:= nbv+1;
+        END_IF
+        if (C=' ') THEN
+        nbmots:= nbmots+1;
+        END_IF
+    END_WHILE
+    write ("the number of character", nbchar);
+    write ("the number of the vowels", nbv);
+    write ("The number of words in the sentence is", nbmots);
+END
